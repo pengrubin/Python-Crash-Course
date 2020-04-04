@@ -4,7 +4,7 @@ print("Here is the original list:")
 print(cars)
 
 print("\nHere is the sorted list:")
-print(sorted(cars))
+print(cars.sort)
 
 print("\nHere is the reverse alphabetical list:")
 print(sorted(cars, reverse=True))
