@@ -1,5 +1,6 @@
 import json
 
+
 def get_number():
 	file_name = "choose_number.json"
 	try:
@@ -8,12 +9,14 @@ def get_number():
 	except FileNotFoundError:
 		return False
 
+
 def get_new_number():
 	file_name = "choose_number.json"
 	number = input("what is your number?")
 	with open(file_name,"w") as file:
 		json.dump(number,file)
 		return number
+
 
 def print_number():
 	number = get_number()
@@ -23,4 +26,6 @@ def print_number():
 		number = get_new_number()
 		print("your number is " + number)
 
-print_number()
+
+if __name__ == "__main__":
+	print_number()
